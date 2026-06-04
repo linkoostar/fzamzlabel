@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>方中亚马逊条码生成器byDONGDONG</title>
+    <title>方中标签生成器byDONGDONG</title>
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
     <style>
         /* 全局控制面板样式 */
@@ -86,11 +86,11 @@
         <div class="row">
             <div class="form-group">
                 <label>标签宽度</label>
-                <input type="number" id="labelWidth" value="70" oninput="updateLayout()">
+                <input type="number" id="labelWidth" value="60" oninput="updateLayout()">
             </div>
             <div class="form-group">
                 <label>标签高度</label>
-                <input type="number" id="labelHeight" value="35" oninput="updateLayout()">
+                <input type="number" id="labelHeight" value="30" oninput="updateLayout()">
             </div>
         </div>
 
@@ -102,12 +102,12 @@
         
         <div class="form-group">
             <label>2. 文本第一行 (商品标题)</label>
-            <textarea id="textLine1" rows="2" oninput="updateLayout()">USB-C Magnetic 3 Charging Cable [PZ]</textarea>
+            <textarea id="textLine1" rows="2" oninput="updateLayout()">USB-C Magnetic 3 Charging Cable</textarea>
         </div>
 
         <div class="form-group">
             <label>3. 文本第二行 (支持连续空格微调间距)</label>
-            <input type="text" id="textLine2" value="New        SN:4DGCVG9 Made in China" oninput="updateLayout()">
+            <input type="text" id="textLine2" value="New  SN:4DGCVG9  Made in China" oninput="updateLayout()">
         </div>
 
         <h3>位置与大小微调</h3>
@@ -122,7 +122,7 @@
         </div>
         <div class="form-group">
             <label>条码 渲染高度 (mm)</label>
-            <input type="number" id="barcodeH" value="12" oninput="updateLayout()">
+            <input type="number" id="barcodeH" value="16" oninput="updateLayout()">
         </div>
         <div class="form-group">
             <label>第一行 垂直位置 (mm)</label>
@@ -130,15 +130,15 @@
         </div>
         <div class="form-group">
             <label>第一行 字体大小 (pt)</label>
-            <input type="number" id="line1Size" value="9" oninput="updateLayout()">
+            <input type="number" id="line1Size" value="8" oninput="updateLayout()">
         </div>
         <div class="form-group">
             <label>第二行 垂直位置 (mm)</label>
-            <input type="number" id="line2Top" value="27" oninput="updateLayout()">
+            <input type="number" id="line2Top" value="22" oninput="updateLayout()">
         </div>
         <div class="form-group">
             <label>第二行 字体大小 (pt)</label>
-            <input type="number" id="line2Size" value="10" oninput="updateLayout()">
+            <input type="number" id="line2Size" value="9" oninput="updateLayout()">
         </div>
 
         <button class="print-btn" onclick="printToPDF()">🖨️ 导出 PDF / 打印</button>
